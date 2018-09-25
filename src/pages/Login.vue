@@ -50,7 +50,8 @@ export default {
         id_number: this.login.id,
         pwd: this.login.password
       }
-      const user = await axios.post('http://192.168.1.38:3000/users/login', data)
+      const rootApi = process.env.VUE_APP_ROOT_API
+      const user = await axios.post(`${rootApi}/users/login`, data)
       store.commit('login', user.data)
       if (user.data.agreed) {
         this.$router.push('/documents')

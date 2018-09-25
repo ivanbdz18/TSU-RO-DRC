@@ -1,13 +1,13 @@
 <template>
   <div>
-    <md-table v-model="users" :table-header-color="tableHeaderColor">
+    <md-table v-model="documentsState2" :table-header-color="tableHeaderColor">
       <md-table-row slot="md-table-row" slot-scope="{ item }">
-        <md-table-cell md-label="Time Date">{{ item.time_date }}</md-table-cell>
+        <md-table-cell md-label="Time Date">{{ item.received }}</md-table-cell>
         <md-table-cell md-label="Tracking No.">{{ item.tracking_number }}</md-table-cell>
         <md-table-cell md-label="Research Title">{{ item.title }}</md-table-cell>
         <md-table-cell md-label="Action">
-          <md-button to="/comment" class="md-raised md-success">Comment</md-button>
-          <md-button class="md-raised md-success">Proceed</md-button>
+          <md-button class="md-raised md-success" :to="`/comment?document=${item.id}&state=2`">Comment</md-button>
+          <md-button class="md-raised md-success" @click.native="proceed(item.id)">Proceed</md-button>
         </md-table-cell>
       </md-table-row>
     </md-table>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'drc-to-fr1',
   props: {
@@ -26,18 +28,23 @@ export default {
   data () {
     return {
       selected: [],
-      users: [
-        {
-          time_date: null,
-          tracking_number: null,
-          title: null
-        },
-        {
-          time_date: null,
-          tracking_number: null,
-          title: null
-        }
-      ]
+      documents: [],
+      documentsState2: []
+    }
+  },
+  created: async function () {
+    await this.getDocuments()
+  },
+  methods: {
+    proceed: async function (documentId) {
+      const rootApi = process.env.VUE_APP_ROOT_API
+      await axios.post(`${rootApi}/documents/${documentId}/release`)
+      await this.getDocuments()
+    },
+    getDocuments: async function () {
+      const rootApi = process.env.VUE_APP_ROOT_API
+      this.documents = (await axios.get(`${rootApi}/documents`)).data
+      this.documentsState2 = this.documents.filter(d => d.state === 2 && d.received !== null)
     }
   }
 }

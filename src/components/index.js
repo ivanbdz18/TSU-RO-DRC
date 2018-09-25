@@ -7,10 +7,15 @@ import StatsCard from './Cards/StatsCard.vue'
 import NavTabsTable from './Tables/NavTabsTable.vue'
 import OrderedTable from './Tables/OrderedTable.vue'
 import SimpleTable from './Tables/SimpleTable.vue'
-import ItDepartment from './Tables/Departments/ItDepartment.vue'
-import CsDepartment from './Tables/Departments/CsDepartment.vue'
-import IsDepartment from './Tables/Departments/IsDepartment.vue'
+import DocumentsTable from './Tables/DocumentsTable.vue'
 import FormsTable from './Tables/FormsTable.vue'
+import TrackTable from './Tracking/TrackTable.vue'
+import ResFromCrec from './Tables/Ingoing/ResFromCrec.vue'
+import ResFromFr from './Tables/Ingoing/ResFromFr.vue'
+import DrcToFr1 from './Tables/Outgoing/DrcToFr1.vue'
+import DrcToFr2 from './Tables/Outgoing/DrcToFr2.vue'
+import UploadResearch from './Upload/UploadResearch.vue'
+import Comments from './Tables/Comments.vue'
 
 export {
   ChartCard,
@@ -19,8 +24,13 @@ export {
   NavTabsTable,
   OrderedTable,
   SimpleTable,
-  ItDepartment,
-  CsDepartment,
-  IsDepartment,
-  FormsTable
+  DocumentsTable,
+  FormsTable,
+  TrackTable,
+  ResFromFr,
+  ResFromCrec,
+  DrcToFr1,
+  DrcToFr2,
+  UploadResearch,
+  Comments
 }

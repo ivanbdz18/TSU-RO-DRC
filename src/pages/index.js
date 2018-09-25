@@ -5,12 +5,12 @@ import UserCard from '../pages/UserProfile/UserCard.vue'
 import EditProfileForm from '../pages/UserProfile/EditProfileForm.vue'
 import EditRequestForm from '../pages/Request/EditRequestForms.vue'
 import EditPassword from '../pages/UserProfile/EditPassword.vue'
-import AddAccountForm from '../pages/UserProfile/AddAccountForm.vue'
+import ProgReport from '../pages/Request/ProgReport.vue'
 
 export {
   UserCard,
   EditProfileForm,
   EditRequestForm,
   EditPassword,
-  AddAccountForm
+  ProgReport
 }

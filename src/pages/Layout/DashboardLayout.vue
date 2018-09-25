@@ -4,17 +4,29 @@
 
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
-      <sidebar-link to="/Accounts">
+      <sidebar-link to="/documents">
         <md-icon>work</md-icon>
-        <p>Researcher Accounts</p>
+        <p>Documents</p>
       </sidebar-link>
-      <sidebar-link to="add">
-        <md-icon>person_add</md-icon>
-        <p>Add Account</p>
+      <sidebar-link to="/ingoing">
+        <md-icon>arrow_downward</md-icon>
+        <p>Ingoing Research</p>
+      </sidebar-link>
+      <sidebar-link to="/outgoing">
+        <md-icon>arrow_upward</md-icon>
+        <p>Outgoing Research</p>
       </sidebar-link>
       <sidebar-link to="/profile">
         <md-icon>person</md-icon>
         <p>Profile</p>
+      </sidebar-link>
+      <sidebar-link to="/forms">
+        <md-icon>description</md-icon>
+        <p>Forms</p>
+      </sidebar-link>
+      <sidebar-link to="/request">
+        <md-icon>send</md-icon>
+        <p>Send Requests / Forms</p>
       </sidebar-link>
 
     </side-bar>

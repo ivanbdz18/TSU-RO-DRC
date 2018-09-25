@@ -1,13 +1,19 @@
 import DashboardLayout from '@/pages/Layout/DashboardLayout.vue'
 import LoginLayout from '@/pages/Layout/LoginLayout.vue'
 
-import Accounts from '@/pages/Accounts.vue'
-import AddAccount from '@/pages/AddAccount.vue'
+import Documents from '@/pages/Documents.vue'
 import Profile from '@/pages/Profile.vue'
-import Login from '@/pages/Login.vue'
+import Forms from '@/pages/Forms.vue'
+import Request from '@/pages/Request.vue'
+import Tracking from '@/pages/Tracking.vue'
 import Terms from '@/pages/Terms.vue'
-import PasswordChange from '@/pages/PasswordChange.vue'
+import Login from '@/pages/Login.vue'
 import Notifications from '@/pages/Notifications.vue'
+import PasswordChange from '@/pages/PasswordChange.vue'
+import IngoingResearch from '@/pages/Ingoing.vue'
+import OutgoingResearch from '@/pages/Outgoing.vue'
+import ProgressReport from '@/pages/ProgressReport.vue'
+import Comment from '@/pages/Comment.vue'
 
 const routes = [
   {
@@ -35,22 +41,52 @@ const routes = [
   {
     path: '/',
     component: DashboardLayout,
-    redirect: '/accounts',
+    redirect: '/documents',
     children: [
       {
-        path: 'accounts',
-        name: 'Accounts',
-        component: Accounts
+        path: 'documents',
+        name: 'Documents',
+        component: Documents
       },
       {
-        path: 'add',
-        name: 'Add Account',
-        component: AddAccount
+        path: 'ingoing',
+        name: 'Ingoing Research',
+        component: IngoingResearch
+      },
+      {
+        path: 'outgoing',
+        name: 'Outgoing Research',
+        component: OutgoingResearch
       },
       {
         path: 'profile',
         name: 'Profile',
         component: Profile
+      },
+      {
+        path: 'forms',
+        name: 'Forms',
+        component: Forms
+      },
+      {
+        path: 'request',
+        name: 'Send Requests / Forms',
+        component: Request
+      },
+      {
+        path: 'tracking',
+        name: 'Tracking',
+        component: Tracking
+      },
+      {
+        path: 'comment',
+        name: 'Comment',
+        component: Comment
+      },
+      {
+        path: 'progreport',
+        name: 'Upload Progress Report',
+        component: ProgressReport
       },
       {
         path: 'notifications',
