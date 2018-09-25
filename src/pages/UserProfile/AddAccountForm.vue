@@ -2,8 +2,8 @@
   <form>
     <md-card>
       <md-card-header :data-background-color="dataBackgroundColor">
-        <h4 class="title">Edit Profile</h4>
-        <p class="category">Complete your profile</p>
+        <h4 class="title">Add Researcher</h4>
+        <p class="category">Complete the profile</p>
       </md-card-header>
       <md-card-content>
         <div class="md-layout md-gutter">
@@ -15,9 +15,11 @@
           </div>
           <div class="md-layout-item">
             <md-field>
-              <label for="college">College</label>
-              <md-select v-model="college" name="college" id="college" disabled>
-                <md-option value="College of Computer Studies">College of Computer Studies</md-option>
+              <label for="college">College and Department</label>
+              <md-select v-model="department_college" name="college" id="college">
+                <md-option value="CCS - Information Technology Department">CCS - Information Technology Department</md-option>
+                <md-option value="CCS - Computer Science Department">CCS - Computer Science Department</md-option>
+                <md-option value="CCS - Information System Department">CCS - Information System Department</md-option>
               </md-select>
             </md-field>
           </div>
@@ -51,14 +53,17 @@
               <md-input v-model="city" type="text"></md-input>
             </md-field>
           </div>
-          <div class="md-layout-item md-small-size-100 md-size-30">
+          <div class="md-layout-item">
             <md-field>
-              <label>Password</label>
-              <md-input v-model="Password" type="text"></md-input>
+              <label for="college">User Type</label>
+              <md-select v-model="usert_type" name="user type" id="user type">
+                <md-option value="Faculty Researcher">Faculty Researcher</md-option>
+                <md-option value="Department Research Chairperson">Department Research Chairperson</md-option>
+              </md-select>
             </md-field>
           </div>
           <div class="md-layout-item md-size-100 text-right">
-            <md-button class="md-raised md-success">Update Profile</md-button>
+            <md-button class="md-raised md-success">Add Account</md-button>
           </div>
         </div>
       </md-card-content>
@@ -67,7 +72,7 @@
 </template>
 <script>
 export default {
-  name: 'edit-profile-form',
+  name: 'add-account-form',
   props: {
     dataBackgroundColor: {
       type: String,
@@ -80,7 +85,8 @@ export default {
       lastname: null,
       firstname: null,
       middlename: null,
-      college: 'College of Computer Studies'
+      college: 'College of Computer Studies',
+      user_type: 'Faculty Researcher'
     }
   }
 }

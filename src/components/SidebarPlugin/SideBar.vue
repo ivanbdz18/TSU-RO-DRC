@@ -38,17 +38,17 @@ export default{
   props: {
     title: {
       type: String,
-      default: 'TSU - Research Office (DRC)'
+      default: 'TSU - Research Office (coll)'
     },
     imgLogo: {
       type: String,
-      default: require('@/assets/img/tsu-logo.png')
+      default: require('@/assets/img/new_logo.png')
     },
     activeColor: {
       type: String,
       default: 'orange',
       validator: (value) => {
-        let acceptedValues = ['', 'orange', 'blue', 'green', 'purple', 'red']
+        let acceptedValues = ['', 'purple', 'blue', 'green', 'orange', 'red']
         return acceptedValues.indexOf(value) !== -1
       }
     },

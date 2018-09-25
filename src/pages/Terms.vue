@@ -4,10 +4,10 @@
       <div class="md-layout-item">
         <md-card>
           <md-card-header data-background-color="green">
-            <h4 class="title">Terms and Agreements</h4>
+            <h4 class="md-title">Terms and Agreements</h4>
           </md-card-header>
           <md-card-content>
-            <div id="typography">
+            <div id="typography" class="md-body-2">
                   <div>
                       <h3>Privacy Statement</h3>
                       <p>TSU (Tarlac State University) is very much aware in protecting your privacy and personal information.
@@ -162,7 +162,7 @@ export default{
   methods: {
     async accept () {
       const userId = store.getters.user.id
-      await axios.post(`http://172.16.1.63:3000/users/${userId}/agree-terms`)
+      await axios.post(`http://192.168.1.38:3000/users/${userId}/agree-terms`)
       this.$router.push('/pwdchange')
     }
   }

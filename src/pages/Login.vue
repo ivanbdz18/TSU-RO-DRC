@@ -50,7 +50,7 @@ export default {
         id_number: this.login.id,
         pwd: this.login.password
       }
-      const user = await axios.post('http://172.16.1.63:3000/users/login', data)
+      const user = await axios.post('http://192.168.1.38:3000/users/login', data)
       store.commit('login', user.data)
       if (user.data.agreed) {
         this.$router.push('/documents')
