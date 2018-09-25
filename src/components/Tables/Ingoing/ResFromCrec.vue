@@ -7,7 +7,7 @@
         <md-table-cell md-label="Title">{{ item.title }}</md-table-cell>
         <md-table-cell md-label="Author">{{ item.author }}</md-table-cell>
         <md-table-cell md-label="Action">
-            <md-button class="md-raised md-success">Recieve</md-button>
+            <md-button class="md-raised md-success">Receive</md-button>
         </md-table-cell>
       </md-table-row>
     </md-table>
