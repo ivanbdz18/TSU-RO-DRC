@@ -5,8 +5,8 @@
     </div>
 
     <md-card-content>
-      <h6 class="category text-gray">Faculty Researcher</h6>
-      <h4 class="card-title">Ivan Dale D. Badbaden</h4>
+      <h6 class="category text-gray">Department Research Chairperson</h6>
+      <h4 class="card-title">Michelle T. Quibuyen</h4>
       <md-button class="md-round md-error" @click="signOut">Sign Out</md-button>
     </md-card-content>
   </md-card>
@@ -17,7 +17,7 @@ export default {
   props: {
     cardUserImage: {
       type: String,
-      default: require('@/assets/img/tim_80x80.png')
+      default: require('@/assets/img/tsu-logo.png')
     }
   },
   data () {

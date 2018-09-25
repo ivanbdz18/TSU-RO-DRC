@@ -5,6 +5,7 @@
         <md-table-cell md-label="Time Date">{{ item.received }}</md-table-cell>
         <md-table-cell md-label="Tracking No.">{{ item.tracking_number }}</md-table-cell>
         <md-table-cell md-label="Research Title">{{ item.title }}</md-table-cell>
+        <md-table-cell md-label="Authors">{{ item.authors }}</md-table-cell>
         <md-table-cell md-label="Grade in Colloquium">
           <md-field>
               <label>Input Grade</label>
@@ -12,6 +13,10 @@
           </md-field>
         </md-table-cell>
         <md-table-cell md-label="Action">
+          <md-button class="md-just-icon md-simple md-primary">
+            <md-icon>get_app</md-icon>
+            <md-tooltip md-direction="top">Download</md-tooltip>
+          </md-button>
           <md-button class="md-raised md-success" :to="`/comment?document=${item.id}&state=5`">Comment</md-button>
           <md-button class="md-raised md-success" @click.native="proceed(item.id)">Proceed</md-button>
         </md-table-cell>
@@ -35,11 +40,30 @@ export default {
     return {
       selected: [],
       documents: [],
-      documentsState5: []
+      documentsState5: [
+        {
+          received: '04:15:46 08/28/18',
+          tracking_number: '54sa4613-8s5r-216f',
+          title: 'POS fo Urban Brew Cafe',
+          authors: 'Michelle Turato, Isaiah Cruz'
+        },
+        {
+          received: '05:45:18 08/11/18',
+          tracking_number: '90gh9562-5e4d-217r',
+          title: 'Online Canvassing System for Tarlac',
+          authors: 'Shaira Muncda'
+        },
+        {
+          received: '10:30:02 07/15/18',
+          tracking_number: '45sd5431-6s2f-123pj',
+          title: 'Online Selling for TSU Stuents',
+          authors: 'Barbara Manabat'
+        }
+      ]
     }
   },
   created: async function () {
-  await this.getDocuments()
+    await this.getDocuments()
   },
   methods: {
     proceed: async function (documentId) {

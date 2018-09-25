@@ -29,11 +29,30 @@ export default {
     return {
       selected: [],
       documents: [],
-      documentsState5: []
+      documentsState5: [
+        {
+          prev_release: '05:28:15 08/15/18',
+          tracking_number: '86kv8621-9f3e-s46b',
+          title: 'Antitrust Law and the Promotion of Democracy and Economic Growth',
+          authors: 'Sheena Abejura. Mika Salamanca'
+        },
+        {
+          prev_release: '05:26:15 08/15/18',
+          tracking_number: '62jg3453-5f1d-643b',
+          title: 'An Analysis of Keynesian Economics',
+          authors: 'Vhong Torres. Abgelina Dela Torre'
+        },
+        {
+          prev_release: '05:12:15 07/25/18',
+          tracking_number: '62kd6267-9q6r-216f',
+          title: 'Who Will Pay to Reduce Global Warming?  A Multivariate Analysis of Concern, Efficacy, and Action',
+          authors: 'Vhong Torres. Abgelina Dela Torre'
+        }
+      ]
     }
   },
   created: async function () {
-  await this.getDocuments()
+    await this.getDocuments()
   },
   methods: {
     getDocuments: async function () {

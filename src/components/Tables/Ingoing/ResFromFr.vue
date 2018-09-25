@@ -29,7 +29,26 @@ export default {
     return {
       selected: [],
       documents: [],
-      documentsState2: []
+      documentsState2: [
+        {
+          prev_release: '05:56:15 08/11/18',
+          tracking_number: '92jf4613-61d3-f3db',
+          title: 'POS for Urdu Restaurant and Catering',
+          authors: 'Sheena Abejura. Mika Salamanca'
+        },
+        {
+          prev_release: '05:45:18 08/11/18',
+          tracking_number: '90gh9562-5e4d-217r',
+          title: 'FoodHub: An online food store tracker',
+          authors: 'Vhong Torres. Angelina Dela Torre'
+        },
+        {
+          prev_release: '04:12:15 07/28/18',
+          tracking_number: '62kd6267-9q6r-216f',
+          title: 'Tabulation for WOD Competition',
+          authors: 'Abegail Mendoza, Miguel Bacong'
+        }
+      ]
     }
   },
   created: async function () {
