@@ -7,11 +7,7 @@
         <md-table-cell md-label="Title">{{ item.title }}</md-table-cell>
         <md-table-cell md-label="Author">{{ item.author }}</md-table-cell>
         <md-table-cell md-label="Action">
-<<<<<<< HEAD
-            <md-button class="md-raised md-success">Receive</md-button>
-=======
             <md-button class="md-raised md-success" @click.native="receiveDocument(item.id)">Recieve</md-button>
->>>>>>> edd6ea286d3fd3adf540314cbb5b2d3f58a08045
         </md-table-cell>
       </md-table-row>
     </md-table>
