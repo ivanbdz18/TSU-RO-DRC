@@ -161,8 +161,9 @@ export default{
   },
   methods: {
     async accept () {
+      const rootApi = process.env.VUE_APP_ROOT_API
       const userId = store.getters.user.id
-      await axios.post(`http://172.16.1.63:3000/users/${userId}/agree-terms`)
+      await axios.post(`${rootApi}/users/${userId}/agree-terms`)
       this.$router.push('/pwdchange')
     }
   }
